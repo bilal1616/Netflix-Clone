@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+    <title>Netflix Login</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://kit.fontawesome.com/0971a59bcd.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/90b1f612e2.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body-login">
+
+    <!-- header  -->
+    <header>
+        <div class="container">
+            <div class="flex flex-logo">
+                <div class="logo">
+                    <a href="Anasayfa.html">
+                        <img src="img/neftlixlogo.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- main  -->
+    <main>
+        <section>
+            <div class="main-container-inner">
+                <div class="main-container flex">
+                    <h1>Oturum Aç</h1>
+                    <form action="text" method="get">
+                        <div class="form-control">
+                            <input type="text" autocomplete="email" id="email" class="flex" name="email/number" required>
+                            <label for="email">E-Posta veya Telefon Numarası</label>
+                            <span id="error-email" class="form-error-text">
+                                Lütfen geçerli bir telefon numarası veya e-posta adresi girin.
+                            </span>
+                        </div>
+                        <div class="form-control">
+                            <input type="password" autocomplete="current-password" id="password" name="password" class="flex" required>
+                            <label for="password">Parola</label>
+                            <span id="error-password" class="form-error-text">
+                                Parolanız 4 ila 60 karakter olmalıdır.
+                            </span>
+                        </div>
+                        <div class="form-control-formbtn">
+                            <a href="profile.html">
+                                <input type="button" class="flex" value="Oturum Aç">
+                            </a>
+                        </div>
+                        <div class="support flex">
+                            <div class="form-checkbox">
+                                <input type="checkbox" class="form-checkbox-input" id="check">
+                                <label for="check" class="form-checkbox-label">Beni hatırla</label>
+                            </div>
+                            <div class="help">
+                                <a href="https://www.netflix.com/tr/LoginHelp">
+                                <span>Yardım ister misiniz?</span></a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="main-footer">
+                        <div class="new-netflix-main-footer">
+                            <p>Netflix'e katılmak ister misiniz?<a href=""> Şimdi kaydolun.</a></p>
+                        </div>
+                        <div class="learn-more-main-footer">
+                            <p>Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor.
+                            <button id="readBtn">Daha fazlasını öğrenin.</button></p>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer  -->
+
+    <footer>
+        <div class="footer-container">
+            <p>Sorularınız mı var? 0850-390-7444 numaralı telefonu arayın</p>
+            <div class="grid-container">
+                <div class="grid-list flex">
+                    <a href="">SSS</a>
+                    <a href="">Çerez Tercihleri</a>
+                </div>
+                <div class="grid-list flex">
+                    <a href="">Yardım Merkezi</a>
+                    <a href="">Kurumsal Bilgiler</a>
+                </div>
+                <div class="grid-list flex">
+                    <a href="">Kullanım Koşulları</a>
+                </div>
+                <div class="grid-list flex">
+                    <a href="">Gizlilik</a>
+
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <button class="lang-btn"><i class="fas fa-globe"></i>  Türkçe <i class="fas fa-angle-down"></i></button>
+                <ul class="language-dropdown">
+                    <li>Türkçe</li>
+                    <li>English</li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- mobile footer  -->
+
+    <footer class="mobile-footer">
+        <div class="mobile-footer-container">
+            <div class="mobile-footer-list-question">
+                <p>Sorularınız mı var? 0850-390-7444 numaralı telefonu arayın</p>
+            </div>
+            <div class="mobile-footer-list">
+                <div class="mobile-footer-list-item">
+                    <a href="#">SSS</a>
+                    <a href="#">Çerez Tercihleri</a>
+                    <a href="#">Kullanım Koşulları</a>
+                </div>
+                <div class="mobile-footer-list-item">
+                    <a href="#">Yardım Merkezi</a>
+                    <a href="#">Kurumsal Bilgiler</a>
+                    <a href="#">Gizlilik</a>
+                </div>
+
+            </div>
+            <div class="mobile-footer-list">
+                <div class="dropdown-container">
+                    <button class="lang-btn"><i class="fas fa-globe"></i>  Türkçe <i class="fas fa-angle-down"></i></button>
+                    <ul class="language-dropdown">
+                        <li>Türkçe</li>
+                        <li>English</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- javascript  -->
+    <script src="profile.js"></script>
+
+</body>
+</html>

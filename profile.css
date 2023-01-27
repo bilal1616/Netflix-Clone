@@ -1,0 +1,983 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --btn-bg-color: #e50914;
+    --download-clr: #0071eb;
+    --div-partition-clr: #222;
+    --faq-bg-clr: #303030;
+    --text-clr: hsl(0, 0%, 100%);
+    --ff-primary: 'Merriweather', serif;
+    --fw-light: 400;
+    --fw-bold: 700;
+    --ff-secondary: 'Roboto Condensed', sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-container h1 {
+    color: #fff;
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    padding-left: 20px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+#error-email, #error-password {
+    display: none;
+}
+
+.form-error-text {
+    color: #e87c03;;
+    font-size: 0.86rem;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-footer p {
+    color: #737373;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.learn-more-main-footer p {
+    color: #737373;
+    font-size: 14.6px;
+    font-weight: 500;
+    margin-top: 0.75em;
+}
+
+.main-footer {
+    margin-top: 0.23em;
+    width: 314px;
+    height: 149px;
+}
+
+.new-netflix-main-footer a {
+    color: var(--text-clr);
+    margin-left: 0.3em;
+}
+
+.learn-more-main-footer a {
+    color: var(--download-clr);
+    margin-left: 0.3em;
+}
+
+
+/* GENERAL STYLING START */
+
+.body-login {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-light);
+    color: var(--text-clr);
+    line-height: 1.3;
+    word-break: normal;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://assets.nflxext.com/ffe/siteui/vlv3/c732cb00-be61-4d64-b8c3-99f022e7a123/f6fac035-8561-401d-854f-be60576370a9/TR-tr-20220620-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 0.35em;
+}
+
+/* GENERAL STYLING START */
+
+
+/* HEADER STYLING START */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin-left: 12.5px;
+    display: flex;
+    padding-top: 25px;
+}
+
+header {
+    padding-left: 35px;
+    display: flex;
+
+}
+
+header .flex {
+    display: flex;
+    height: 45px;
+    width: 167px;
+    vertical-align: middle;
+}
+
+/* HEADER STYLING START */
+
+
+/* MAIN STYLING - FORM START */
+
+.main-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: stretch;
+    flex-direction: column;
+    width: 450px;
+    height: 671.2px;
+    margin: 0 auto;
+    padding: 2em 3em 4em;
+    border-radius: 0.2em;
+    margin-top: 1vh;
+}
+
+.form-control {
+    background-color: var(--faq-bg-clr);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em 0.8em;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    margin-bottom: 3em;
+    position: relative;
+    box-shadow: inset 0 -2px 0 0 #ff9900;
+    width: 314px;
+    height: 50px;
+}
+
+.form-control input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-clr);
+    font-size: 0.8em;
+}
+
+.form-control label {
+    font-size: 0.95em;
+    font-weight: var(--fw-light);
+    color: #959090;
+    position: absolute;
+    pointer-events: stroke;
+    transform: translateY(-5px);
+    transition: all 0.2s ease-in-out;
+    padding-left: 5px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.form-control input:valid+label,
+.form-control input:focus+label {
+    font-size: 0.9em;
+    transform: translateY(-15px);
+}
+
+.form-control-formbtn {
+    background-color: var(--btn-bg-color);
+    padding: 0.8em 0;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 0.3em;
+    width: 314px;
+    height: 48.6px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.form-control-formbtn input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--text-clr);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.3em;
+}
+
+.support {
+    margin-top: 0.5vh;
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 500;
+    width: 314px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px;
+    padding-left: 4.4px;
+}
+
+.form-checkbox-input {
+    display: none;
+}
+
+.form-checkbox label {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.form-checkbox-input:checked + .form-checkbox-label:before {
+    background-color: #737373;
+    color: #000;
+    background-repeat: no-repeat;
+}
+
+.form-checkbox-input + .form-checkbox-label:before {
+    content: "\f00c";
+    font: var(--fa-font-solid);
+    width: 16px;
+    height: 16px;
+    background: #737373;
+    background-color: white;
+    color: white;
+    border-radius: 4px;
+    background-size: 6px;
+    background-position: center;
+    transition: 0.2s;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.main-footer {
+    font-family: var(--ff-secondary);
+}
+
+#readBtn {
+    background: transparent;
+    color: var(--download-clr);
+    border: none;
+    outline: none;
+    margin: -0.38vw;
+}
+
+.new-netflix-main-footer a:hover,
+.learn-more-main-footer button:hover {
+    text-decoration: underline;
+}
+
+#read-more {
+    padding: 1em 0.5em;
+    color: #959090;
+    text-align: justify;
+    display: none;
+}
+
+.help a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.help a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN STYLING - FORM START */
+
+
+/* FOOTER STYLING START */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3em 5em;
+    color: #555454;
+    width: 100%;
+    margin-top: 11.5vh;
+}
+
+footer .footer-container {
+    margin-left: 13vw;
+    margin-right: 8vw;
+}
+
+footer .grid-container {
+    margin: 3em 0;
+    align-items: flex-start;
+    gap: 0.5em;
+    font-size: 13px;
+}
+
+.grid-list {
+    flex-direction: column;
+    gap: 1em;
+}
+
+.grid-list a {
+    color: #555454;
+    font-size: 0.8rem;
+    align-self: flex-start;
+}
+
+.grid-list a:hover {
+    text-decoration: underline;
+}
+
+footer .dropdown-container {
+    width: 121px;
+    height: 48px;
+    border: 2px solid var(--faq-bg-clr);
+    padding: 0.5em;
+    border-radius: 0.15rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    color: rgb(92, 89, 89);
+}
+
+.language-dropdown {
+    display: none;
+    width: 100%;
+    background-color: hsl(0, 0%, 0%);
+    position: absolute;
+    top: 42px;
+    text-align: center;
+}
+
+.language-dropdown li {
+    padding: 0.1em;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.language-dropdown li:hover {
+    background-color: #0071eb;
+    color: #fff;
+}
+
+footer .fa-globe,
+footer .fa-angle-down {
+    color: rgb(92, 89, 89);
+}
+
+/* FOOTER STYLING END */
+
+
+/* Netflix Profile Page Start */
+
+.body-profile{
+    background: none;
+    background-color: #141414;
+}
+
+.netflix-navbar{
+    width: 1170px;
+    height: 68px;
+    display: flex;
+}
+
+.netflix-navbar img {
+    width: 92.5px;
+    height: 29.6px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.netflix-main-profile {
+    width: 1200px;
+    height: 745.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20vh;
+    margin: auto;
+}
+
+.netflix-list-profile{
+    width: 875px;
+    height: 296px;
+}
+
+.profile-main-title {
+    width: 875px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: unset;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.choose-profile{
+    width: 875px;
+    height: 192px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: unset;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    padding-top: 11vh;
+}
+
+.profile {
+    width: 155.4px;
+    height: 192px;
+}
+
+.profile-link {
+    width: 155.4px;
+    height: 163px;
+}
+
+.avatar-wrapper {
+    width: 155.4px;
+    height: 156.4px;
+}
+
+.avatar-icon {
+    width: 155.4px;
+    height: 156.4px;
+}
+
+.profile-name {
+    width: 155.4px;
+    height: 47px;
+    line-height: 1.2em;
+    min-height: 1.8em;
+    color: grey;
+    display: block;
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 0.6em 0;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.profile-name:hover {
+    border: none;
+    color: #fff;
+}
+
+.avatar-icon:hover {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.profile-button {
+    display: block;
+    margin: 2em 0 1em 0;
+    font-size: 1.2vw;
+    border: 1px solid grey;
+    color: grey;
+    padding: 0.5em 1.5em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.profile-button:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* Netflix Profile Page End*/
+
+.mobile-footer {
+    display: none;
+}
+
+/* MEDIA QUERY */
+
+/* Login Page Responsiv Start*/
+@media (max-width: 420px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .mobile-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 95vw;
+        height: 309px;
+        border-top: 1px solid #757575;
+        margin: 0 auto;
+        padding: 0 2vw;
+        margin-top: 1.5vh;
+    }
+
+    .mobile-footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 95vw;
+        height: 288px;
+        margin-top: 3vh;
+    }
+
+    .mobile-footer-list{
+        width: 95vw;
+        height: 288px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 2.5vh;
+    }
+
+    .mobile-footer-list-question {
+        width: 95vw;
+        height: 12vh;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .mobile-footer-list-question p {
+        font-size: 16px;
+        font-weight: unset;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: #757575;
+    }
+
+    .mobile-footer-list-item {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 13px;
+        font-weight: unset;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: #757575;
+    }
+
+    .mobile-footer-list-item a {
+        font-size: 13.5px;
+        font-weight: unset;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: #757575;
+        margin-top: 1.5vh;
+    }
+
+    .body-login{
+        background: none;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    header{
+        background: none;
+        background-color: #000;
+        padding-left: 12px;
+        width: 390px;
+        height: 45px;
+    }
+
+    header img {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        display: flex;
+        width: 74px;
+        height: 20px;
+    }
+
+    .flex-logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        width: 74px;
+        height: 20px;
+    }
+
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        display: block;
+        color: #333;
+        margin: 0 auto;
+        padding: 0 5%;
+        width: 100%;
+
+    }
+
+    section {
+        width: 100%;
+        padding-right: 5vw;
+    }
+
+    .main-container-inner {
+        width: 100%;
+        height: 575px;
+        margin-top: -1.75vh;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 550px;
+        margin-top: 0;
+    }
+
+    .main-container form {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+
+    .main-container h1 {
+        margin-right: 35vw;
+        width: 100%;
+        color: #fff;
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 3vh;
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .form-control {
+        background-color: var(--faq-bg-clr);
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.3em;
+        position: relative;
+        box-shadow: inset 0 -2px 0 0 #ff9900;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 5.5vh
+    }
+
+    .form-control-formbtn {
+        background-color: var(--btn-bg-color);
+        padding: 0.8em 0;
+        cursor: pointer;
+        justify-content: center;
+        display: flex;
+        margin: 0 auto;
+        border-radius: 0.3em;
+        width: 90vw;
+        height: 48.6px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .support {
+        margin-top: 0.2vh;
+        color: #b3b3b3;
+        font-size: 13px;
+        font-weight: 500;
+        width: 90vw;
+        height: 17px;
+        display: flex;
+        justify-content: space-between;
+        margin: 12px 0;
+        padding-left: 0;
+    }
+
+    .help {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .main-footer {
+        margin-top: 0.5vh;
+        width: 90vw;
+        height: 182px;
+        font-weight: 500;
+        margin-right: 0;
+    }
+
+    .new-netflix-main-footer a {
+        color: white;
+        font-weight: 500;
+        margin-top: 16px;
+        height: 18px;
+    }
+
+    .new-netflix-main-footer p {
+        color: #757575;
+        font-weight: 500;
+        margin-top: 16px;
+        height: 18px;
+    }
+
+    .learn-more-main-footer p{
+        color: #757575;
+        font-weight: 500;
+        margin-top: 16px;
+        height: 30px;
+    }
+
+    #readBtn {
+        background-color: transparent;
+        border: none;
+        color: #0071eb;
+        cursor: pointer;
+        display: inline;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 0;
+    }
+    /* Login Page Responsiv End*/
+
+
+    /* Profil Page Responsiv Start*/
+    .body-profile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        background: #141414;
+        z-index: 0;
+    }
+    
+    .netflix-navbar{
+        width: 390px;
+        height: 70px;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .netflix-navbar a {
+        width: 46px;
+        height: 12.7px;
+        margin-left: 3px;
+        margin-top: 3px;
+    }
+    
+    .netflix-navbar img {
+        width: 46px;
+        height: 12.7px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    
+    .netflix-main-profile {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 12vh;
+        margin: 0;
+    }
+    
+    .netflix-list-profile{
+        width: 312px;
+        height: 327px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 1vh;
+    }
+    
+    .profile-main-title {
+        width: 100%;
+        height: 49px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-size: 7.5vw;
+        font-weight: unset;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        padding-top: 3vh;
+    }
+    
+    .choose-profile{
+        width: 277px;
+        height: 240px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        color: #fff;
+        font-size: 1.5vw;
+        font-weight: unset;
+        font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        padding-top: 0.6vh;
+        margin-left: 1vw;
+    }
+
+    .profile-a .profile-b{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        
+    }
+    
+    .profile {
+        width: 79px;
+        height: 79px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .profile-link {
+        width: 79px;
+        height: 79px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .avatar-wrapper {
+        width: 79px;
+        height: 79px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .avatar-icon {
+        width: 79px;
+        height: 79px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .profile-name {
+        width: 155.4px;
+        height: 47px;
+        line-height: 1.2em;
+        min-height: 1.8em;
+        color: grey;
+        display: block;
+        text-align: center;
+        font-size: 3.1vw;
+        margin: 0.6em 0;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    
+    .profile-button {
+        display: block;
+        margin: 2em 0 1em 0;
+        font-size: 3.75vw;
+        border: 1px solid grey;
+        color: grey;
+        padding: 0.5em 1.5em;
+        letter-spacing: 2px;
+        cursor: pointer;
+        background-color: transparent;
+        margin-bottom: 11vh;
+    }
+
+
+
+
+
+
+    /* Profil Page Responsiv Start*/
+}
